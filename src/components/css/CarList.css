@@ -1,0 +1,80 @@
+.animated-container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.3s forwards;
+}
+body {
+  background-image: url("../../assets/4226455_2248931.jpg");
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container-padding {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 600px) {
+  .container-padding {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.container-padding .MuiAlert-standardSuccess {
+  color: #fff;
+}
+
+.container-padding .MuiAlert-standardError {
+  color: #fff;
+}
+
+.container-padding .MuiTextField-root .MuiOutlinedInput-root {
+  & fieldset {
+    border-color: rgba(252, 250, 255, 0.966) !important;
+  }
+  &:hover fieldset {
+    border-color: rgba(248, 246, 255, 0.738) !important;
+  }
+  &.Mui-focused fieldset {
+    border-color: rgba(237, 235, 244, 0.892) !important;
+  }
+}
+
+.container-padding .MuiInputLabel-root {
+  color: rgb(253, 252, 255) !important;
+}
+
+.container-padding .MuiTextField-root .MuiOutlinedInput-input {
+  background-color: rgba(32, 30, 30, 0.062) !important;
+  color: #efeffadf !important;
+}
+
+.container-padding .MuiTextField-root .MuiAutocomplete-input {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}

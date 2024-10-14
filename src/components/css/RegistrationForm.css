@@ -1,0 +1,79 @@
+h1 {
+  font-size: 2em;
+  text-align: center;
+  color: rgb(106, 207, 173) !important;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../../assets/top-view-workspace-with-copy-space-laptop.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  
+}
+
+.form-container {
+  background-color: rgba(58, 50, 50, 0.255) !important;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  animation: slideInFromRight 1s ease-out forwards;
+  position: relative;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.register-form .MuiTextField-root .MuiOutlinedInput-root {
+  & fieldset {
+    border-color: rgba(255, 0, 0, 0.732) !important;
+  }
+  &:hover fieldset {
+    border-color: rgba(255, 0, 0, 0.949) !important;
+  }
+  &.Mui-focused fieldset {
+    border-color: rgba(255, 0, 0, 0.707) !important;
+  }
+}
+
+.register-form .MuiInputLabel-root {
+  color: rgb(255, 0, 0) !important;
+}
+
+.register-form .MuiTextField-root .MuiOutlinedInput-input,
+.register-form .MuiAutocomplete-input {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  color: #ff0000 !important;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    margin: 0 auto;
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+}
+.register-form .MuiAlert-standardSuccess {
+  color: #80ff3b !important;
+  background-color: rgba(22, 21, 21, 0) !important;
+}
+
+.register-form .MuiAlert-standardError {
+  color: #d9ff00 !important;
+  background-color: rgba(75, 73, 73, 0.089) !important;
+}

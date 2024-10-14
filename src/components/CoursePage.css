@@ -1,0 +1,45 @@
+/* src/components/CoursePage.css */
+.course-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .course-image {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+  
+  .assessments-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .options-list {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .question {
+    font-weight: bold;
+  }
+  
+  .assessment-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .assessment-link:hover {
+    background-color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+  }
+  

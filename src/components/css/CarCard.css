@@ -1,0 +1,36 @@
+.styled-card {
+  background: rgba(255, 255, 255, 0.74) !important; 
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(179, 176, 176, 0.2);
+  transition: box-shadow 0.5s, transform 0.5s; 
+  width: 100%; 
+  display: flex;
+  flex-direction: column; 
+  height: 100%; 
+}
+
+.styled-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+  transform: scale(1.02);
+  z-index: 1; 
+}
+
+.card-image {
+  width: 100%; 
+  height: 300px; 
+  object-fit: cover; /* Cover the area without stretching */
+}
+
+.card-content {
+  flex-grow: 1; /* Allow the content area to grow */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space out content */
+}
+
+/* Optional: Adjust typography size for smaller screens */
+@media (max-width: 600px) {
+  .card-image {
+    height: 150px; /* Adjust image height for smaller screens if needed */
+  }
+}

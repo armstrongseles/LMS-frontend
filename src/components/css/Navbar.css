@@ -1,0 +1,14 @@
+.nav{
+   width: 90% !important;
+  display: flex;
+  justify-content:space-evenly;
+  flex-direction: row;
+  align-items:center;
+  background-color:rgba(0, 0, 0, 0.367) !important ;
+  border-radius:10px;
+  margin-left: 5%;
+}
+
+.nav .MuiButton-text:hover{
+  color: rgb(242, 222, 41) !important;
+}

@@ -1,0 +1,98 @@
+.booking-container {
+  padding: 20px;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.booking-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(84, 80, 80, 0.156);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.booking-left {
+  margin-bottom: 20px;
+}
+
+.booking-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.total-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Ensure that header and navbar are properly stacked */
+.header {
+  width: 100%; /* Full width */
+  margin-bottom: 0; /* No margin below to collapse with navbar */
+}
+
+.navbar {
+  width: 100%; /* Full width */
+  margin-top: 0; /* No margin above to collapse with header */
+}
+
+/* Additional styles for Material-UI components */
+.booking .MuiAlert-standardSuccess {
+  color: #fff;
+}
+
+.booking .MuiAlert-standardError {
+  color: #fff;
+}
+.booking .total-details{
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+.booking .MuiTextField-root .MuiOutlinedInput-root {
+  & fieldset {
+    border-color: rgba(246, 240, 255, 0.892) !important;
+  }
+  &:hover fieldset {
+    border-color: rgba(66, 228, 174, 0.738) !important;
+  }
+  &.Mui-focused fieldset {
+    border-color: rgba(58, 5, 250, 0.707) !important;
+  }
+}
+
+.booking .MuiInputLabel-root {
+  color: rgb(255, 255, 255) !important;
+}
+
+.booking .MuiTextField-root .MuiOutlinedInput-input {
+  background-color: rgba(32, 30, 30, 0.062) !important;
+  color: #eeeeff !important;
+}
+
+.booking .MuiTextField-root .MuiAutocomplete-input {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .top {
+    display: none; /* Hide the header on small screens if needed */
+  }
+}

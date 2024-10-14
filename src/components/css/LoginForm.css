@@ -1,0 +1,84 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../../assets/set-office-supplies.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow-y: hidden;
+}
+
+.form-container {
+  background: rgba(139, 137, 137, 0.308) !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(179, 176, 176, 0.2);
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideInFromLeft 1s ease-out forwards;
+  position: relative;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.form-container h1 {
+  color: #ffffff !important;
+  text-align: center;
+}
+
+.login-form .MuiAlert-standardSuccess {
+  color: #54ff05 !important;
+  background-color: rgba(31, 30, 30, 0.179);
+}
+
+.login-form .MuiAlert-standardError {
+  color: #ffbb01 !important;
+  background-color: rgba(34, 33, 33, 0.079) !important;
+}
+
+.login-form .MuiTextField-root .MuiOutlinedInput-root {
+  & fieldset {
+    border-color: rgba(255, 255, 255, 0.732) !important;
+  }
+  &:hover fieldset {
+    border-color: rgba(255, 255, 255, 0.949) !important;
+  }
+  &.Mui-focused fieldset {
+    border-color: rgba(237, 235, 244, 0.707) !important;
+  }
+}
+
+.login-form .MuiInputLabel-root {
+  color: rgb(253, 252, 255) !important;
+}
+
+.login-form .MuiTextField-root .MuiOutlinedInput-input,
+.login-form .MuiAutocomplete-input {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  color: #ffffff !important;
+}
+
+.login-form .MuiAutocomplete-popper .MuiAutocomplete-option {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    margin: 0 auto;
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+}

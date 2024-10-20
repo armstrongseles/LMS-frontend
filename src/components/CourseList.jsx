@@ -35,7 +35,7 @@ const CourseList = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/courses');
+        const response = await axios.get('https://lms-backend-7-m7iv.onrender.com/api/courses');
         setCourses(response.data);
       } catch (err) {
         setError("Failed to fetch courses");
@@ -47,7 +47,7 @@ const CourseList = () => {
     const fetchEnrolledCourses = async () => {
       if (userId) {
         try {
-          const response = await axios.get(`http://localhost:4000/api/enrolledCourses/${userId}`);
+          const response = await axios.get(`https://lms-backend-7-m7iv.onrender.com/api/enrolledCourses/${userId}`);
           const enrolledCourseIds = response.data.map(course => course._id);
           setEnrolledCourses(enrolledCourseIds);
         } catch (err) {
@@ -68,7 +68,7 @@ const CourseList = () => {
         throw new Error('User ID is not available');
       }
   
-      const { data } = await axios.post('http://localhost:4000/api/enroll', { courseId, userId });
+      const { data } = await axios.post('https://lms-backend-7-m7iv.onrender.com/api/enroll', { courseId, userId });
       navigate('/payment', { state: { orderId: data.orderId, courseId, amount: price, userId } });
     } catch (error) {
       console.error("Failed to enroll:", error);

@@ -36,7 +36,7 @@ const TestPage = () => {
       const fetchCourse = async () => {
         try {
           setLoading(true); // Set loading to true when fetching starts
-          const response = await axios.get(`http://localhost:4000/api/courses/${courseId}`);
+          const response = await axios.get(`https://lms-backend-7-m7iv.onrender.com/api/courses/${courseId}`);
           setAssessments(response.data.assessments);
           setTitle(response.data.title);
         } catch (err) {
@@ -89,7 +89,7 @@ const TestPage = () => {
 
     // Send the score and status to the backend
     try {
-      await axios.post(`http://localhost:4000/api/enrollment/${userId}/submit-assessment`, {
+      await axios.post(`https://lms-backend-7-m7iv.onrender.com/api/enrollment/${userId}/submit-assessment`, {
         courseId,
         marksObtained: correctAnswersCount * 5,
         status, // Set status to "Completed" or "Ongoing"

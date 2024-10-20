@@ -13,7 +13,7 @@ const CoursePage = () => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await axios.get(`https://lms-backend-3-p0u4.onrender.com/api/courses/${courseId}`);
+        const response = await axios.get(`https://lms-backend-7-m7iv.onrender.com/api/courses/${courseId}`);
         setCourse(response.data);
       } catch (err) {
         setError("Failed to fetch course data. Please try again later.");

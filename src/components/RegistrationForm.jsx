@@ -36,7 +36,7 @@ function RegistrationForm() {
           onSubmit={async (values, { setSubmitting }) => {
             try {
               await axios.post(
-                "http://localhost:4000/api/auth/register",
+                "https://lms-backend-7-m7iv.onrender.com/api/auth/register",
                 values
               );
               setSuccess('Registration successful');

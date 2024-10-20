@@ -10,7 +10,7 @@ const EnrollmentStatus = ({ userId }) => {
   useEffect(() => {
     const fetchEnrollments = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/enrollment/${userId}`);
+        const response = await axios.get(`https://lms-backend-7-m7iv.onrender.com/api/enrollment/${userId}`);
         setEnrollments(response.data);
       } catch (err) {
         setError(err.message);

@@ -36,7 +36,7 @@ const EnrolledCourses = () => {
     const fetchEnrolledCourses = async () => {
       try {
         if (userId) {
-          const response = await axios.get(`http://localhost:4000/api/enrollment/${userId}`);
+          const response = await axios.get(`https://lms-backend-7-m7iv.onrender.com/api/enrollment/${userId}`);
           if (Array.isArray(response.data)) {
             setEnrolledCourses(response.data);
           } else {

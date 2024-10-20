@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (values) => {
     try {
-      const response = await axios.post('http://localhost:4000/api/auth/login', values);
+      const response = await axios.post('https://lms-backend-3-p0u4.onrender.com/api/auth/login', values);
       const { token, userId } = response.data;
 
     
